@@ -33,4 +33,5 @@ ctrboard/fsm.o: ..\User\1-APL(Application\ Layer)\src\fsm.c \
   ..\User\gravity\gravity.h ..\User\1-APL(Application\ Layer)\inc\fsm.h \
   ..\User\2-MWL(Middleware\ Layer)\inc\button_status_read.h \
   ..\User\2-MWL(Middleware\ Layer)\inc\motor_protect.h \
-  ..\User\2-MWL(Middleware\ Layer)\inc\motor_function.h
+  ..\User\2-MWL(Middleware\ Layer)\inc\motor_function.h \
+  ..\User\gravity\cartesian_assist.h

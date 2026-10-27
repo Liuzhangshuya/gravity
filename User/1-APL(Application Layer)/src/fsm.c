@@ -4,9 +4,10 @@
 #include "gravity.h"
 #include "fsm.h"
 #include "math.h"
-#include "button_status_read.h" 
+#include "button_status_read.h"
 #include "motor_protect.h"
 #include "motor_function.h"
+#include "cartesian_assist.h"
 
 
 float q[6];
@@ -14,7 +15,7 @@ float arm[6];
 float q_ikine[6];
 
 
-static void motor_par_send(void);
+static void motor_par_send(const fsm_t *fsm);
 static void fsm_param_get(fsm_t *fsm);
 
 void fsm_run(fsm_t* fsm) {
@@ -37,7 +38,7 @@ void fsm_run(fsm_t* fsm) {
                 lock_flag = 0; 
                 fsm->state = fsm_judge;
             }
-            motor_par_send();
+            motor_par_send(fsm);
             break;
 
         case fsm_judge:
@@ -47,7 +48,7 @@ void fsm_run(fsm_t* fsm) {
             break;
         
         case fsm_geforce_off:
-                motor_par_send();
+                motor_par_send(fsm);
             break;
 
 
@@ -84,7 +85,7 @@ void fsm_run_test(fsm_t* fsm) {
         }
         global_system_halt_flag = 1;
         fsm->state = fsm_protect;
-        motor_par_send();
+        motor_par_send(fsm);
         return;
     }
 
@@ -105,7 +106,7 @@ void fsm_run_test(fsm_t* fsm) {
 
                 fsm->state = fsm_judge;
             }
-            motor_par_send();
+            motor_par_send(fsm);
             break;
 
             case fsm_judge:
@@ -141,7 +142,7 @@ void fsm_run_test(fsm_t* fsm) {
                 lock_pin7_last_state = current_pin7_state;
                 
                 motor_lock();
-                motor_par_send();			
+                motor_par_send(fsm);			
                 break;
 
             case fsm_geforce_off:
@@ -159,7 +160,7 @@ void fsm_run_test(fsm_t* fsm) {
                     motor[i].cmd.kp_set = 0;
                     motor[i].cmd.kd_set = MOTOR_FLOAT_KD;
                 }
-                motor_par_send();
+                motor_par_send(fsm);
                 break;
             case fsm_test:
                 if (motor_pos_run())
@@ -167,17 +168,17 @@ void fsm_run_test(fsm_t* fsm) {
                     lock_flag = 0;
                     fsm->state = fsm_lock;
                 }
-                motor_par_send();
+                motor_par_send(fsm);
                 break;
             default:
                 global_system_halt_flag = 1;
-                motor_par_send();
+                motor_par_send(fsm);
                 break;
 
     }
 }
 
-static void motor_par_send(void)
+static void motor_par_send(const fsm_t *fsm)
 {
     
     static uint8_t compensation_started = 0;
@@ -188,6 +189,9 @@ static void motor_par_send(void)
             compensation_start_ms = HAL_GetTick();
         }
         Gravity_Arm_Run();
+        /* 末端各向异性阻抗：只在浮动状态、且 g_cart_assist_enable=1 时叠加，
+         * 默认关闭时这一行不改变任何力矩。 */
+        CartesianAssist_Run((uint8_t)(fsm->state == fsm_geforce_off));
         float ramp = fminf((float)(HAL_GetTick() - compensation_start_ms) / 500.0f, 1.0f);
         for (int i = 0; i < motor_num; i++) {
             motor[i].cmd.tor_set *= ramp;

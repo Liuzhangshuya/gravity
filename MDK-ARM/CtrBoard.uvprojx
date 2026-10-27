@@ -1285,6 +1285,16 @@
               <FileType>1</FileType>
               <FilePath>..\User\gravity\gravity_math.c</FilePath>
             </File>
+            <File>
+              <FileName>cartesian_assist.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\gravity\cartesian_assist.c</FilePath>
+            </File>
+            <File>
+              <FileName>cartesian_assist.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\User\gravity\cartesian_assist.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

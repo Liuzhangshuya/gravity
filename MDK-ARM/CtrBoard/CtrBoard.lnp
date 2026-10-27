@@ -58,6 +58,7 @@
 "ctrboard\gravity.o"
 "ctrboard\gravity_comp.o"
 "ctrboard\gravity_math.o"
+"ctrboard\cartesian_assist.o"
 "..\lib\arm_cortexM4lf_math.lib"
 --strict --scatter "CtrBoard\CtrBoard.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

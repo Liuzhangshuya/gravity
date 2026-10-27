@@ -1639,7 +1639,7 @@ I (..\User\bsp\can_bsp.h)(0x6ACB5F5D)
 I (..\User\2-MWL(Middleware Layer)\inc\CRC8_CRC16.h)(0x6ACB5F5C)
 I (..\User\module\task.h)(0x6ACB5F5D)
 F (..\User\1-APL(Application Layer)\inc\fsm.h)(0x6ACB5F5C)()
-F (..\User\1-APL(Application Layer)\src\fsm.c)(0x6ADC73F4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/bsp -I ../User/driver -I ../User/motor -I ../User/module -I "../User/1-APL(Application Layer)/inc" -I "../User/2-MWL(Middleware Layer)/inc" -I ../User/gravity -I ../lib/Inc-I./RTE/_CtrBoard-ID:/keill/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F446xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F446xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o ctrboard/fsm.o -MMD)
+F (..\User\1-APL(Application Layer)\src\fsm.c)(0x6AE06944)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/bsp -I ../User/driver -I ../User/motor -I ../User/module -I "../User/1-APL(Application Layer)/inc" -I "../User/2-MWL(Middleware Layer)/inc" -I ../User/gravity -I ../lib/Inc-I./RTE/_CtrBoard-ID:/keill/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F446xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F446xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o ctrboard/fsm.o -MMD)
 I (..\User\motor\dm4310_ctrl.h)(0x6ADC4919)
 I (..\Core\Inc\main.h)(0x6ACB5F5B)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x6ACB5F5C)
@@ -1679,6 +1679,7 @@ I (..\User\1-APL(Application Layer)\inc\fsm.h)(0x6ACB5F5C)
 I (..\User\2-MWL(Middleware Layer)\inc\button_status_read.h)(0x6ACB5F5C)
 I (..\User\2-MWL(Middleware Layer)\inc\motor_protect.h)(0x6ADC4918)
 I (..\User\2-MWL(Middleware Layer)\inc\motor_function.h)(0x6ADC73F0)
+I (..\User\gravity\cartesian_assist.h)(0x6AE0959D)
 F (..\User\2-MWL(Middleware Layer)\inc\CRC8_CRC16.h)(0x6ACB5F5C)()
 F (..\User\2-MWL(Middleware Layer)\src\CRC8_CRC16.c)(0x6ACB5F5C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/bsp -I ../User/driver -I ../User/motor -I ../User/module -I "../User/1-APL(Application Layer)/inc" -I "../User/2-MWL(Middleware Layer)/inc" -I ../User/gravity -I ../lib/Inc-I./RTE/_CtrBoard-ID:/keill/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F446xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F446xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o ctrboard/crc8_crc16.o -MMD)
 I (..\User\2-MWL(Middleware Layer)\inc\CRC8_CRC16.h)(0x6ACB5F5C)
@@ -1875,4 +1876,44 @@ I (..\User\gravity\robot_parameters.h)(0x6ADDF99E)
 F (..\User\gravity\gravity_math.c)(0x6ACB5F5D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/bsp -I ../User/driver -I ../User/motor -I ../User/module -I "../User/1-APL(Application Layer)/inc" -I "../User/2-MWL(Middleware Layer)/inc" -I ../User/gravity -I ../lib/Inc-I./RTE/_CtrBoard-ID:/keill/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F446xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F446xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o ctrboard/gravity_math.o -MMD)
 I (..\User\gravity\gravity_config.h)(0x6ACB5F5D)
 I (..\User\gravity\robot_parameters.h)(0x6ADDF99E)
+F (..\User\gravity\cartesian_assist.c)(0x6AE096B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/bsp -I ../User/driver -I ../User/motor -I ../User/module -I "../User/1-APL(Application Layer)/inc" -I "../User/2-MWL(Middleware Layer)/inc" -I ../User/gravity -I ../lib/Inc-I./RTE/_CtrBoard-ID:/keill/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="542" -DSTM32F446xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F446xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o ctrboard/cartesian_assist.o -MMD)
+I (..\User\gravity\cartesian_assist.h)(0x6AE0959D)
+I (..\User\gravity\gravity_config.h)(0x6ACB5F5D)
+I (..\User\gravity\robot_parameters.h)(0x6ADDF99E)
+I (..\Core\Inc\main.h)(0x6ACB5F5B)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x6ACB5F5C)
+I (..\Core\Inc\stm32f4xx_hal_conf.h)(0x6ACB5F5B)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x6ACB5F5C)
+I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x6ACB5F5B)
+I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h)(0x6ACB5F5B)
+I (..\Drivers\CMSIS\Include\core_cm4.h)(0x6ACB5F5B)
+I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x6ACB5F5B)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_adc.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_can.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x6ACB5F5C)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x6ACB5F5C)
+I (..\User\motor\dm4310_ctrl.h)(0x6ADC4919)
+I (..\User\motor\dm4310_drv.h)(0x6ACB5F5D)
+I (..\Core\Inc\can.h)(0x6ACB5F5B)
+I (..\User\bsp\can_bsp.h)(0x6ACB5F5D)
+I (..\User\2-MWL(Middleware Layer)\inc\motor_protect.h)(0x6ADC4918)
+F (..\User\gravity\cartesian_assist.h)(0x6AE0959D)()
 F (..\lib\arm_cortexM4lf_math.lib)(0x6ACB5F5D)()
